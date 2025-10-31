@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+
+:root {
+  --bg-color: #0C182F; 
+  --text-color: #FFFFFF; 
+  --primary-accent: #1A4F4F; 
+  --secondary-accent: #4CAF50; 
+  --card-bg: #1A4F4F; 
+  --light-green: #7CC47C; 
+  --dark-text-on-light: #333333; 
+  --light-gray-border: #cccccc;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Merriweather', serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--secondary-accent); 
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--text-color); 
+}
+
+h2 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid var(--primary-accent); 
+  padding-bottom: 5px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--secondary-accent); 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: var(--light-green); 
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: bold;
+  color: var(--light-green); 
+}
+
+pre, code {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #2d2d2d; 
+  color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.main-nav {
+  background-color: var(--primary-accent); 
+  padding: 1rem 0;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.main-nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--text-color); 
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a.active {
+  background-color: var(--secondary-accent); 
+  color: var(--text-color); 
+  text-decoration: none;
+}
+
+
+main {
+  background-color: var(--primary-accent); 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--light-green); 
+}
+
+
+.profile-pic {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem auto;
+  border: 5px solid var(--secondary-accent);
+  object-fit: cover;
+}
+
+
+.skills-list {
+  list-style-type: square;
+  padding-left: 20px;
+  color: var(--text-color);
+}
+
+.skills-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+
+.project-list dt {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--secondary-accent); 
+  margin-top: 1.5rem;
+}
+
+.project-list dd {
+  margin-left: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--light-green); 
+}
+
+
+.experiences-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .experiences-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Blog Post Styling --- */
+.blog-post {
+  border-bottom: 1px solid var(--light-green); 
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.blog-post h3 {
+  color: var(--secondary-accent); 
+  margin-bottom: 0.25rem;
+}
+
+.blog-post-meta {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--light-green); 
+  margin-bottom: 1rem;
+}
+
+.blog-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
